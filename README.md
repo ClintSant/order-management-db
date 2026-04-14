@@ -6,12 +6,11 @@ Tecnologias
 - SQLite
 - SQL
 
- Estrutura do Projeto
- order-management-db/
-schema.sql: Criação das tabelas
-inserts.sql: Dados de exemplo
-queries.sql: Consultas SQL
-.gitignore
+Estrutura
+
+O projeto é composto por quatro arquivos principais: o schema.sql é responsável pela criação das tabelas e relacionamentos, o inserts.sql popula o banco com dados de exemplo simulando uma loja de eletrônicos, o queries.sql reúne as principais consultas do projeto e o .gitignore garante que o arquivo do banco de dados não seja enviado ao repositório.
+
+
 
  Modelagem
 
