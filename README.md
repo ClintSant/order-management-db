@@ -8,10 +8,10 @@ Tecnologias
 
  Estrutura do Projeto
  order-management-db/
-├── schema.sql        Criação das tabelas
-├── inserts.sql       Dados de exemplo
-├── queries.sql       Consultas SQL
-└── .gitignore
+schema.sql: Criação das tabelas
+inserts.sql: Dados de exemplo
+queries.sql: Consultas SQL
+.gitignore
 
  Modelagem
 
