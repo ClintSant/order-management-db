@@ -41,3 +41,44 @@ sqlite3 banco.db ".read schema.sql"
 sqlite3 banco.db ".read inserts.sql"
 sqlite3 banco.db ".read queries.sql"
 ```
+
+## 📊 Diagrama ER
+
+```mermaid
+erDiagram
+  clientes {
+    int id_cliente PK
+    text nome
+    text email
+    text telefone
+    date data_cadastro
+  }
+  categorias {
+    int id_categoria PK
+    text nome
+  }
+  produtos {
+    int id_produto PK
+    text nome
+    real preco
+    int estoque
+    int id_categoria FK
+  }
+  pedidos {
+    int id_pedido PK
+    int id_cliente FK
+    datetime data_pedido
+    text status
+  }
+  itens_pedido {
+    int id_item PK
+    int id_pedido FK
+    int id_produto FK
+    int quantidade
+    real preco_unitario
+  }
+  clientes ||--o{ pedidos : "realiza"
+  pedidos ||--|{ itens_pedido : "contém"
+  produtos ||--|{ itens_pedido : "compõe"
+  categorias ||--o{ produtos : "classifica"
+```
